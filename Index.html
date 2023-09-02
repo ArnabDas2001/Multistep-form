@@ -8,24 +8,29 @@
     <title>Multistep form</title>
 </head>
 <body>
+    <nav>
+        <div class="navitems">
+        <img src="Untitled_design-removebg-preview.png" alt="">
+        <h2>Applier</h2>
+    </div>
+    </nav>
     <div class="container">
         <div class="card">
             <div class="form">
                 <div class="left-side">
-                    <div class="left-heading">
-                        <h3>Apply</h3>
-                    </div>
                     <div class="steps-content">
                         <h3>Step <span class="step-number">1</span></h3>
-                        <p class="step-number-content active">Enter your personal information to get closer to companies.</p>
-                        <p class="step-number-content d-none">Get to know better by adding your diploma,certificate and educational qualification.</p>
-                        <p class="step-number-content d-none">Help companies get to know you better by telling then about your past experiences.</p>
-                        <p class="step-number-content d-none">Add your profile piccture and let companies find youy fast.</p>
+                        <p class="step-number-content active">progress</p>
+                        <div class="progress-container">
+                            <div class="progress-indicator" id="progress-indicator"></div>
+                            <div class="progress-text" id="progress-text">0%</div>
+                        </div>
                     </div>
                     <ul class="progress-bar">
                         <li class="active">Personal Information</li>
                         <li>Education</li>
                         <li>Work Experience</li>
+                        <li>Skills</li>
                     </ul>
                     
     
@@ -40,18 +45,18 @@
                         </div>
                         <div class="input-text">
                             <div class="input-div">
-                                <input type="text" required require id="user_name" placeholder="First Name">
+                                <input type="text" required id="user_name" placeholder="First Name">
                             </div>
                             <div class="input-div"> 
-                                <input type="text" required require placeholder="Last Name">
+                                <input type="text" required placeholder="Last Name">
                             </div>
                         </div>
                         <div class="input-text">
                             <div class="input-div">
-                                <input type="text" required require placeholder="Phone number">
+                                <input type="text" required placeholder="Phone number">
                             </div>
                             <div class="input-div">
-                                <input type="text" required require placeholder="E-mail Address">
+                                <input type="text" required placeholder="E-mail Address">
                             </div>
                         </div>
                         <div class="input-text">
@@ -93,7 +98,7 @@
                             </div>
                         </div>
                         <div class="buttons">
-                            <button class="next_button">Next Step</button>
+                            <button class="next_button" id="next_button">Next Step</button>
                         </div>
                     </div>
                     <div class="main">
@@ -104,15 +109,15 @@
                         </div>
                         <div class="input-text">
                             <div class="input-div">
-                                <input type="text" required require placeholder="School Name">
+                                <input type="text" required placeholder="School Name">
                             </div>
                             <div class="input-div"> 
-                                <input type="text" required require placeholder="Board Name">
+                                <input type="text" required placeholder="Board Name">
                             </div>
                         </div>
                         <div class="input-text">
                             <div class="input-div">
-                                <input type="text" required require placeholder="College/University name">
+                                <input type="text" required placeholder="College/University name">
                             </div>
                         </div>
                         <div class="input-text">
@@ -132,10 +137,11 @@
                             </div>
                         </div>
                         <div class="buttons button_space">
-                            <button class="back_button">Back</button>
-                            <button class="next_button">Next Step</button>
+                            <button class="back_button" id="back_button">Back</button>
+                            <button class="next_button" id="next_button2">Next Step</button>
                         </div>
                     </div>
+
                     <div class="main">
                         <small><i class="fa fa-smile-o"></i></small>
                         <div class="text">
@@ -144,34 +150,109 @@
                         </div>
                         <div class="input-text">
                             <div class="input-div">
-                                <input type="text" required  placeholder="Experience 1">
+                                <input type="text" required placeholder="Experience 1">
                             </div>
                             <div class="input-div"> 
-                                <input type="text" required require placeholder="Position">
-                            </div>
-                        </div>
-                        <div class="input-text">
-                            <div class="input-div">
-                                <input type="text" required placeholder="Experience 2">
-                            </div>
-                            <div class="input-div">
                                 <input type="text" required placeholder="Position">
                             </div>
                         </div>
                         <div class="input-text">
                             <div class="input-div">
-                                <input type="text" required placeholder="Experience 3">
+                                <input type="text"  placeholder="Experience 2">
+                            </div>
+                            <div class="input-div">
+                                <input type="text"  placeholder="Position">
+                            </div>
+                        </div>
+                        <div class="input-text">
+                            <div class="input-div">
+                                <input type="text"  placeholder="Experience 3">
                             </div>
                             <div class="input-div">
                                 <input type="text" required placeholder="Position">
                             </div>
                         </div>
                         <div class="buttons button_space">
-                            <button class="back_button">Back</button>
-                            <button class="submit_button">Submit</button>
+                            <button class="back_button" id="back_button2">Back</button>
+                            <button class="next_button" id="next_button3">Next Step</button>
                         </div>
                     </div>
                     
+                    <div class="main">
+                        <small><i class="fa fa-smile-o"></i></small>
+                        <div class="text">
+                            <h2>Skills</h2>
+                            <p>Select the skills you're fimiliar with.</p>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="column">
+                            <label>
+                                <input type="checkbox"> 
+                               HTML
+                            </label>
+                            <label>
+                                <input type="checkbox"> 
+                               Bootstrap
+                            </label>
+                            <label>
+                                <input type="checkbox"> 
+                              CSS
+                            </label>
+                            <label>
+                                <input type="checkbox"> 
+                               Tailwind CSS
+                            </label>
+                            <label>
+                                <input type="checkbox"> 
+                              Javascript
+                            </label>
+                            <label>
+                                <input type="checkbox"> 
+                              Typescript
+                            </label>
+                            <label>
+                                <input type="checkbox"> 
+                              Node JS
+                            </label>
+                        </div>
+                        <div class="column">
+                            <label>
+                                <input type="checkbox"> 
+                              Express
+                            </label>
+                            <label>
+                                <input type="checkbox"> 
+                              React JS
+                            </label>
+                            <label>
+                                <input type="checkbox"> 
+                              Next JS
+                            </label>
+                            <label>
+                                <input type="checkbox"> 
+                              PHP
+                            </label>
+                            <label>
+                                <input type="checkbox"> 
+                              MongoDB
+                            </label>
+                            <label>
+                                <input type="checkbox"> 
+                              Oracle
+                            </label>
+                            <label>
+                                <input type="checkbox"> 
+                              MySQL
+                            </label>
+                        </div>
+                        </div>
+                        
+                        <div class="buttons button_space">
+                            <button class="back_button" id="back_button3">Back</button>
+                            <button class="submit_button" id="submit_button">Submit Step</button>
+                        </div>
+                </div>
                     
                      <div class="main">
                          <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
@@ -192,4 +273,5 @@
 </body>
 
 <script src="script.js"></script>
+<script src="progress.js"></script>
 </html>
