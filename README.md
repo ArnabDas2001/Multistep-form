@@ -1,5 +1,5 @@
 # Multistep Form
- This a multistep form using HTML, CSS, Bootstrap, and Javascript
+ This a multistep form I made using HTML, CSS, Bootstrap, and Javascript
 
 # Desktop View
 ![Screenshot_desktop view](https://github.com/ArnabDas2001/Multistep-form_Internship-assignment/assets/102038057/751c1ec3-fa75-4d18-ad28-17fa16845516)
